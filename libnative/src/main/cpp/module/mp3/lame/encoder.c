@@ -29,7 +29,7 @@
 #include <config.h>
 #endif
 
-
+#include <string.h>
 #include "lame.h"
 #include "machine.h"
 #include "encoder.h"
@@ -41,8 +41,6 @@
 #include "bitstream.h"
 #include "VbrTag.h"
 #include "quantize_pvt.h"
-
-
 
 /*
  * auto-adjust of ATH, useful for low volume

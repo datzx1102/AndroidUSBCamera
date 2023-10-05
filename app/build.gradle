@@ -12,7 +12,7 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionNameString
 
-        multiDexEnabled true
+        multiDexEnabled = true
 
         ndk{
             abiFilters 'armeabi-v7a','arm64-v8a'
@@ -37,6 +37,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.jiangdg.demo'
 
     // libuvc module should need set local.properties
     // eg: ndk.dir=D\:\\Developer\\Environment\\AndroidSdks\\ndk\\21.0.6113669
@@ -55,6 +56,11 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$quick_version"
     implementation "com.afollestad.material-dialogs:core:$dialog_version"
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation "com.tencent.bugly:crashreport:$bugly_version"
     implementation "com.tencent.bugly:nativecrashreport:$bugly_native_version"

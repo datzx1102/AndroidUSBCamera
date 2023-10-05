@@ -30,10 +30,12 @@
 # include <config.h>
 #endif
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "lame.h"
 #include "machine.h"
-
 #include "encoder.h"
 #include "util.h"
 #include "lame_global_flags.h"
